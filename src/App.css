@@ -11,10 +11,114 @@
     background: linear-gradient(180deg, rgba(122,147,245,1) 0%, rgba(71,102,229,1) 100%);
     min-height: 100vh;
     width: 100%;
+    flex-direction: column;
+}
+
+#center{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header h1{
     margin-left: -30px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(17,30,80,1) 0%, rgba(52,85,223,1) 100%);
+    background-clip: text;
+    color: transparent; /* Makes the text transparent to show the background */
+}
+
+#userInput{
+    min-width: auto;
+    max-width: 90%;
+    min-height: 300px;
+    border-color: rgb(56, 79, 172);
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(56, 79, 172, 0.473);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 
+                0 6px 6px rgba(0,0,0,0.23);
+}
+
+#userInput p:first-of-type{
+    background-color: #314082;
+    padding: 10px 8px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 
+    0 2px 6px rgba(0,0,0,0.23);
+}
+
+.spaceP {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.note{
+    color:rgb(153, 20, 20);
+    font-weight: bold;
+}
+
+#userInput p{
+    width: 90%;
+    text-align: center;
+}
+
+#userInput span{
+    text-decoration: underline;
+}
+
+input{
+    color: rgb(150, 170, 247);
+    border: 2px solid #314082;
+    border-radius: 5px; 
+    padding: 10px 0px; 
+    outline: none;
+    transition: all 0.3s ease; 
+    font-size: 16px;
+    background-color: #314082;
+    text-align: center;
+    animation: scaleUpDown 2s infinite
+}
+
+input:hover{
+    animation: scaleUpDown 2s infinite;
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+      transform: scale(1); /* Original size */
+    }
+    50% {
+      transform: scale(1.1); /* Scale up by 10% */
+    }
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.restart-button{
+    color: rgb(150, 170, 247);
+    border: 2px solid #314082;
+    border-radius: 5px; 
+    padding: 10px; 
+    outline: none;
+    transition: all 0.3s ease; 
+    font-size: 16px;
+    background-color: #314082;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 
+                0 6px 6px rgba(0,0,0,0.23);
+    margin-bottom: 25px;
+}
+
+button:hover{
+    transform: scale(0.95);
 }
